@@ -1,0 +1,28 @@
+{% extends 'app/main.html' %}
+
+{% load static  %}
+
+{% block content %}
+<table align="center">
+<p style="text-align:center;background-color: rgb(247, 59, 84);font-size:20px" class="card card-body">Are you sure you want to delete this"{{item}}"?</p>
+    <form action="{% url 'delete_order' item.id %}" method="POST">
+        {% csrf_token %}
+
+        <tr>
+            <th style="text-align:center">
+                <a class="btn btn-warning" href="{% url 'home' %}">Cancel</a>
+
+            </th>
+            <th style="text-align:center">
+                <button type="submit" class="btn btn-danger" style="text-align:center">Delete</button>
+            </th>
+       </tr>
+    </form>
+
+</table>
+
+
+
+{% endblock %}
+
+

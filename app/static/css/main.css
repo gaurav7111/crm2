@@ -1,0 +1,21 @@
+#logo{
+}
+
+body{
+    background-color:rgb(220, 228, 212); 
+       
+}
+#total-orders{
+    background-color: rgb(53, 197, 233);
+    border-radius: 15px;
+}
+#orders-delivered{
+    background-color: rgb(39, 221, 22);
+    border-radius: 15px;
+    
+
+}
+#orders-pending{
+    background-color:rgb(245, 225, 51);
+    border-radius: 15px;
+}

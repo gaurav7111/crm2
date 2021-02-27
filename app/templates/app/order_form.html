@@ -1,0 +1,25 @@
+{% extends 'app/main.html' %}
+
+{% load static  %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md" >
+        <div class="card card-body" style="background-color: rgb(90, 235, 145);">
+
+            <form action="" method="POST">
+             {% csrf_token %}
+             {{formset.management_form}}
+             {% for form in formset %}
+                     {{form}}
+                     <hr>
+             {% endfor %}
+            <button type="submit"class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+

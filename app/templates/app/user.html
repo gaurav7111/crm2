@@ -1,0 +1,32 @@
+{% extends 'app/main.html' %}
+{% load static %}
+{% block content %}
+{% include 'app/status.html' %}
+
+<div class="row">
+    <div class="col">
+        <div class="card card-body">
+            <table class="table table-sm;" style="background-color: rgb(238, 185, 205); font-size: 20px; font-family:serif">
+                <tr style="background-color: rgb(150, 228, 106);">
+                    <th>Products</th>
+                    <th>Category</th>
+                    <th>Date Order</th>
+                    <th>status</th>
+                </tr>
+                {% for order in orders %}
+                <tr>
+                    <td>{{order.product}}</td>
+                    <td>{{order.product.category}}</td>
+                    <td>{{order.date_created}}</td>
+                    <td>{{order.status}}</td>
+                  
+                </tr>
+
+                {% endfor %}
+
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
